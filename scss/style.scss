@@ -30,6 +30,10 @@ html {
 
 body {
     height: 100%;
+    opacity: 0;
+    // animation
+    animation: 2s ease 0s 1 normal forwards fadein;
+    -webkit-animation: 2s ease 0s 1 normal forwards fadein;
 
     &.loading {
         // transition
@@ -74,10 +78,6 @@ main {
         gap: 2rem;
         padding: 1rem;
         height: 100%;
-        opacity: 0;
-        // animation
-        animation: 2s ease 0s 1 normal forwards up;
-        -webkit-animation: 2s ease 0s 1 normal forwards up;
 
         .logo {
             display: flex;
@@ -115,9 +115,23 @@ main {
 
         a {
             text-decoration: none;
-            padding: 1rem;
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            padding: 1rem 0;
             color: white;
             background: none;
+            // transition
+            transition: all .2s ease;
+
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+
+            &:hover {
+                gap: 1rem;
+            }
         }
     }
 
@@ -126,30 +140,9 @@ main {
         z-index: -1;
         top: 0;
         height: 100%;
-        opacity: 0;
         background-position: center;
         background-size: cover;
         background-image: url('../source/background.png');
-        // animation
-        animation: 2s ease 0s 1 normal forwards fadein;
-        -webkit-animation: 2s ease 0s 1 normal forwards fadein;
-    }
-}
-
-// slideup
-@keyframes up {
-    0% {
-        opacity: 0;
-        -webkit-opacity: 0;
-        transform: translateY(2rem);
-        -webkit-transform: translateY(2rem);
-    }
-
-    100% {
-        opacity: 1;
-        -webkit-opacity: 1;
-        transform: translateY(0);
-        -webkit-transform: translateY(0);
     }
 }
 
