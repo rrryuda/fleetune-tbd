@@ -17,15 +17,10 @@ html {
     -webkit-text-size-adjust: 100%;
     word-break: keep-all;
     overflow: hidden;
-    font-size: 18px;
+    font-size: 16px;
     height: 100%;
     color: white;
     background: black;
-
-    // media
-    @media screen and (max-width: 768px) {
-        font-size: 16px;
-    }
 }
 
 body {
@@ -75,62 +70,60 @@ main {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 2rem;
-        padding: 1rem;
+        padding: 1rem 2rem;
+        max-width: 400px;
         height: 100%;
+        margin: 0 auto;
 
         .logo {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 1rem;
-            max-width: 400px;
-
-            @at-root {
-                span {
-                    text-align: center;
-                    font-size: 1rem;
-                    font-weight: 600;
-                    line-height: 1.5em;
-                }
-            }
-
-            span {
-                color: rgba(200, 200, 200, 1);
-            }
+            margin: 2rem 0 .5rem;
 
             svg {
                 position: relative;
                 box-sizing: border-box;
                 display: block;
                 width: 100%;
+                fill: url(#logo) #fff;
+
+                .stop1 {
+                    stop-color: white;
+                }
+
+                .stop2 {
+                    stop-color: white;
+                    stop-opacity: .6;
+                }
             }
+
         }
 
         .soon {
-            position: absolute;
-            top: 2rem;
+            text-align: center;
+            font-size: 1.25rem;
+            font-weight: 500;
+            line-height: 1.75em;
             color: rgba(160, 160, 160, 1);
         }
 
-        a {
-            text-decoration: none;
+        .vision {
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 1.75em;
+            color: rgba(200, 200, 200, 1);
+        }
+
+        .links {
             display: flex;
-            align-items: center;
-            gap: .5rem;
-            padding: 1rem 0;
-            color: white;
-            background: none;
-            // transition
-            transition: all .2s ease;
+            gap: 1rem;
+            margin-top: 3rem;
 
-            svg {
-                width: 24px;
-                height: 24px;
-            }
-
-            &:hover {
-                gap: 1rem;
+            a:hover {
+                opacity: .6;
             }
         }
     }
